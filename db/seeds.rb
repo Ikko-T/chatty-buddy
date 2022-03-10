@@ -1,5 +1,5 @@
 user_count = 3
-message_count = 3
+message_count = 1000
 
 ApplicationRecord.transaction do
   user_count.times do |n|
