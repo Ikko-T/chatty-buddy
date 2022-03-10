@@ -40,9 +40,48 @@ document.addEventListener('turbolinks:load', () => {
 
   messageContent.addEventListener('input', () => {
     button_activation();
+    changeLineCheck();
   });
 
   messageButton.addEventListener('click', () => {
     messageButton.classList.add('disabled');
+    changeLineCount(1);
   });
+
+  const maxLineCount = 10;
+
+  const getLineCount = () => {
+    return (messageContent.value + '\n').match(/\r?\n/g).length;
+  };
+
+  let lineCount = getLineCount();
+  let newLineCount;
+
+  const changeLineCheck = () => {
+    newLineCount = Math.min(getLineCount(), maxLineCount);
+
+    if (lineCount !== newLineCount) {
+      changeLineCount(newLineCount);
+    }
+  };
+
+  const footer = document.getElementById('footer');
+  let footerHeight = footer.scrollHeight;
+  let newFooterHeight, footerHeightDiff;
+
+  const changeLineCount = (newLineCount) => {
+    messageContent.rows = lineCount = newLineCount;
+
+    newFooterHeight = footer.scrollHeight;
+    footerHeightDiff = newFooterHeight - footerHeight;
+
+    if (footerHeightDiff > 0) {
+      messageContainer.style.paddingBottom = newFooterHeight + 'px';
+      window.scrollBy(0, footerHeightDiff);
+    } else {
+      window.scrollBy(0, footerHeightDiff);
+      messageContainer.style.paddingBottom = newFooterHeight + 'px';
+    }
+    footerHeight = newFooterHeight;
+  };
 });
