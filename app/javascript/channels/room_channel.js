@@ -19,4 +19,12 @@ document.addEventListener('turbolinks:load', () => {
       messageContainer.insertAdjacentHTML('beforeend', data['message']);
     },
   });
+
+  const documentElement = document.documentElement;
+  window.messageContent = document.getElementById('message_content');
+  window.scrollToBottom = () => {
+    window.scroll(0, documentElement.scrollHeight);
+  };
+
+  scrollToBottom();
 });
