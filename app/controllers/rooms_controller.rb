@@ -3,4 +3,9 @@ class RoomsController < ApplicationController
     @messages = Message.includes(:user).order(:id)
     @message = current_user.messages.build
   end
+
+  def show_additionally
+    last_id = params[:olodest_message_id].to_i - 1
+    @messages = Message.include(:user).order(:id).where(id: 1..last_id).last(50)
+  end
 end
