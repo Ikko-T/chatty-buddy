@@ -5,6 +5,6 @@ class Message < ApplicationRecord
   validates :content, presence: true, length: { maximum: 500 }
 
   def template
-    ApplicationController.renderer.render partial: 'messages/message', locals: { message: self }
+    ApplicationController.render partial: 'messages/message', locals: { message: self }
   end
 end
