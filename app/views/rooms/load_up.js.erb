@@ -1,11 +1,11 @@
-var messageHeight = messageContainer.scrollHeight
+<%# var messageHeight = messageContainer.scrollHeight %>
 
-messageContainer.insertAdjacentHTML('afterbegin', "<%= j(render @messages) %>")
+<%# messageContainer.insertAdjacentHTML('afterbegin', "j(render @messages)") %>
 
-var newMessageHeight = messageContainer.scrollHeight
+<%# var newMessageHeight = messageContainer.scrollHeight %>
 
-window.scrollBy(0, newMessageHeight - messageHeight)
+<%# window.scrollBy(0, newMessageHeight - messageHeight) %>
 
-<% if @messages.present? %>
-  loadUp = true
-<% end %>
+<%# if @messages.present? %>
+  <%# loadUp = true %>
+<%# end %>
