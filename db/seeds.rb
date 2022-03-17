@@ -1,5 +1,7 @@
-user_count = 3
-message_count = 1000
+user_count = 5
+message_count = 50
+
+ActiveRecord::Base.connection.execute("TRUNCATE TABLE users RESTART IDENTITY CASCADE")
 
 ApplicationRecord.transaction do
   user_count.times do |n|
@@ -8,7 +10,6 @@ ApplicationRecord.transaction do
     end
   end
 
-  Message.destroy_all
   user_ids = User.ids
   message_list = []
   message_count.times do |n|
