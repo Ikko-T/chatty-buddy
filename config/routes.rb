@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   devise_for :users
   root 'rooms#show'
   resources :messages, only: :create
-  get '/show_additionally', to: 'rooms#show_additionally'
+  get '/load_up', to: 'rooms#load_up'
 end

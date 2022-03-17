@@ -87,17 +87,17 @@ document.addEventListener('turbolinks:load', () => {
 
   let oldestMessageId;
 
-  window.showAdditionally = true;
+  window.loadUp = true;
 
   window.addEventListener(
     'scroll',
     () => {
-      if (documentElement.scrollTop === 0 && showAdditionally) {
-        showAdditionally = false;
+      if (documentElement.scrollTop === 0 && loadUp) {
+        loadUp = false;
         oldestMessageId = document.getElementsByClassName('message')[0].id.replace(/[^0-9]/g, '');
         $.ajax({
           type: 'GET',
-          url: 'show_additionally',
+          url: 'load_up',
           cache: false,
           data: { oldest_message_id: oldestMessageId, remote: true },
         });
