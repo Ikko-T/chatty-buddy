@@ -85,24 +85,24 @@ document.addEventListener('turbolinks:load', () => {
     footerHeight = newFooterHeight;
   };
 
-  let oldestMessageId;
+  // let oldestMessageId;
 
-  window.showAdditionally = true;
+  // window.loadUp = true;
 
-  window.addEventListener(
-    'scroll',
-    () => {
-      if (documentElement.scrollTop === 0 && showAdditionally) {
-        showAdditionally = false;
-        oldestMessageId = document.getElementsByClassName('message')[0].id.replace(/[^0-9]/g, '');
-        $.ajax({
-          type: 'GET',
-          url: 'show_additionally',
-          cache: false,
-          data: { oldest_message_id: oldestMessageId, remote: true },
-        });
-      }
-    },
-    { passive: true }
-  );
+  // window.addEventListener(
+  //   'scroll',
+  //   () => {
+  //     if (documentElement.scrollTop === 0 && loadUp) {
+  //       loadUp = false;
+  //       oldestMessageId = document.getElementsByClassName('message')[0].id.replace(/[^0-9]/g, '');
+  //       $.ajax({
+  //         type: 'GET',
+  //         url: '/load_up',
+  //         cache: false,
+  //         data: { oldest_message_id: oldestMessageId, remote: true },
+  //       });
+  //     }
+  //   },
+  //   { passive: true }
+  // );
 });

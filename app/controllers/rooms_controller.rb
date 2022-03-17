@@ -4,8 +4,8 @@ class RoomsController < ApplicationController
     @message = current_user.messages.build
   end
 
-  def show_additionally
-    last_id = params[:olodest_message_id].to_i - 1
-    @messages = Message.include(:user).order(:id).where(id: 1..last_id).last(50)
-  end
+  # def load_up
+  #   last_id = params[:oldest_message_id].to_i - 1
+  #   @messages = load_olod_messages(50)
+  # end
 end
