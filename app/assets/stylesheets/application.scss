@@ -17,16 +17,57 @@
 @import 'bootstrap/scss/bootstrap';
 
 #message-container {
-  max-width: 768px;
+  max-width: 980px;
   margin: 0 auto;
   padding: 1rem 1rem 8rem 1rem;
-}
 
-footer {
-  max-width: 768px;
-  padding: 1rem;
-  margin: 0 auto;
-  background-color: white;
+  .message {
+    min-height: 60px;
+
+    .content-container {
+      display: inline-block;
+
+      .content {
+        background-color: #eeeeee;
+        padding: 8px 16px;
+        border-radius: 20px;
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+
+      .user {
+        font-size: 0.8rem;
+        color: #777777;
+        margin-left: 10px;
+      }
+    }
+
+    &.yes {
+      overflow: hidden;
+
+      .content-container {
+        float: right;
+
+        .content {
+          background-color: #007bff;
+          color: white;
+        }
+
+        .user {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  footer {
+    max-width: 980px;
+    padding: 1rem;
+    margin: 0 auto;
+    background-color: white;
+  }
 }
 
 .btn-primary.disabled {
@@ -37,4 +78,20 @@ footer {
 
 #message_content {
   resize: none;
+}
+
+.mw-md {
+  max-width: 576px;
+}
+
+.mw-xl {
+  max-width: 980px;
+}
+
+.alert-notice {
+  @extend .alert-info;
+}
+
+.alert-alert {
+  @extend .alert-danger;
 }

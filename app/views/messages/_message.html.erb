@@ -1,4 +1,10 @@
-<div class="message" id="message-<%= message.id %>">
-  <p><%= message.id %>: <%= message.user.email %>: <%= l message.created_at, format: '%H:%M %a %b-%d-%Y' %></p>
-  <%= simple_format(h message.content) %>
+<div class="message mt-3 <%= my_message?(message) %>" id="message-<%= message.id %>">
+  <div class="content-container">
+    <div class="content">
+      <%= simple_format(h message.content) %>
+    </div>
+    <div class="user">
+      <%= message.user.email %>: <%= l message.created_at, format: :short %>
+    </div>
+  </div>
 </div>
