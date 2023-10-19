@@ -81,6 +81,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS"){5} %>
   database: chatty_buddy_production
   username: chatty_buddy
   password: <%= ENV['CHATTY_BUDDY_DATABASE_PASSWORD'] %>
