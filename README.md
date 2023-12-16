@@ -149,5 +149,5 @@ Below are instructions on getting you a copy of the project up and running on yo
 [purpose-shield]: https://img.shields.io/badge/PURPOSE-Coding%20Challenge%20Websites%2FApps-yellow
 [project-title]: https://img.shields.io/badge/PROJECT%20TITLE-Chatty%20Buddy-blue
 [npm-url]: https://www.npmjs.com/
-[project-url]: https://chatty-buddy-w2bg4.ondigitalocean.app/
+[project-url]: https://chatty-buddy-y8brn.ondigitalocean.app/
 [websocket-url]: https://en.wikipedia.org/wiki/WebSocket
