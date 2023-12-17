@@ -51,11 +51,11 @@ In this project, I have built a messenger-like application named [Chatty Buddy][
 
 ### Build With
 
-- [Ruby 2.6.6](https://github.com/ruby/ruby)
-- [Rails 6.1.4](https://github.com/rails/rails)
+- [Ruby 3.1.4](https://github.com/ruby/ruby)
+- [Rails 6.1.4.6](https://github.com/rails/rails)
 - [HTML5.0](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [Bootstrap@5.1.3](https://getbootstrap.com/)
-- [PostgreSQL 14.1](https://www.postgresql.org/)
+- [PostgreSQL 14.9](https://www.postgresql.org/)
   <br>
 
 ### Gems Used
@@ -149,5 +149,5 @@ Below are instructions on getting you a copy of the project up and running on yo
 [purpose-shield]: https://img.shields.io/badge/PURPOSE-Coding%20Challenge%20Websites%2FApps-yellow
 [project-title]: https://img.shields.io/badge/PROJECT%20TITLE-Chatty%20Buddy-blue
 [npm-url]: https://www.npmjs.com/
-[project-url]: https://chatty-buddy-staging.herokuapp.com/
+[project-url]: https://chatty-buddy-y8brn.ondigitalocean.app/
 [websocket-url]: https://en.wikipedia.org/wiki/WebSocket
